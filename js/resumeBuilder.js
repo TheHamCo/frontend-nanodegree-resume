@@ -219,6 +219,19 @@ education.display = function () {
                 .append(templater(HTMLschoolMajor, major));
         });
     });
+    //ONLINE CLASSES
+    $('#education')
+        .append(HTMLonlineClasses);
+    this.onlineCourses.forEach(function (course) {
+        $('#education')
+            .append(HTMLschoolStart);
+        //DATA
+        $('.education-entry:last')
+            .append(templater(HTMLonlineTitle, course.title) +
+                templater(HTMLonlineSchool, course.school))
+            .append(templater(HTMLonlineDates,course.date))
+            .append(templater(HTMLonlineURL, course.url));
+    });
 };
 education.display();
 projects.display();
