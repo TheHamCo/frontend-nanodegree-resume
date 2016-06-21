@@ -168,8 +168,10 @@ bio.display = function () {
 
 work.display = function () {
     this.jobs.forEach(function (job) {
+        //CONTAINER DIV
         $('#workExperience')
             .append(HTMLworkStart);
+        //DATA
         $('.work-entry:last')
             .append(templater(HTMLworkEmployer, job.employer) +
                 templater(HTMLworkTitle, job.title))
@@ -180,14 +182,18 @@ work.display = function () {
 };
 
 projects.display = function () {
+    //PROJECTS
     this.projects.forEach(function (project) {
+        //CONTAINER DIV
         $('#projects')
             .append(HTMLprojectStart);
+        //DATA
         var projectEntry = $('.project-entry:last');
         projectEntry
             .append(templater(HTMLprojectTitle, project.title))
             .append(templater(HTMLprojectDates, project.dates))
             .append(templater(HTMLprojectDescription, project.description));
+        //PROJECT IMAGES
         project.images.forEach(function (image) {
             projectEntry
                 .append(templater(HTMLprojectImage, image));
@@ -195,15 +201,19 @@ projects.display = function () {
     });
 };
 education.display = function () {
+    //UNIVERSITIES
     this.schools.forEach(function (school) {
+        //CONTAINER DIV
         $('#education')
             .append(HTMLschoolStart);
+        //DATA
         var educationEntry = $('.education-entry:last');
         educationEntry
             .append(templater(HTMLschoolName, school.name) +
                 templater(HTMLschoolDegree, school.degree))
             .append(templater(HTMLschoolDates, school.dates))
             .append(templater(HTMLschoolLocation, school.location));
+        //UNIVERSITY MAJORS
         school.majors.forEach(function (major) {
             educationEntry
                 .append(templater(HTMLschoolMajor, major));
