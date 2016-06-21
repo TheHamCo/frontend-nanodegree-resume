@@ -109,7 +109,7 @@ var projects = {
                 title       : 'Cornell CS2300: Promote Something'
               , dates       : '2016'
               , description : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium esse fuga mollitia'
-              , images      : ['','']
+              , images      : ['https://unsplash.it/200/200/?random','https://unsplash.it/200/200/?random']
           },{
                 title       : 'Cornell CS2300: Online Catalog'
               , dates       : '2016'
