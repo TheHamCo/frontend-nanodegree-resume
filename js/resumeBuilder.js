@@ -179,5 +179,21 @@ work.display = function () {
     });
 };
 
+projects.display = function () {
+    this.projects.forEach(function (project) {
+        $('#projects')
+            .append(HTMLprojectStart);
+        var projectEntry = $('.project-entry:last');
+        projectEntry
+            .append(templater(HTMLprojectTitle, project.title))
+            .append(templater(HTMLprojectDates, project.dates))
+            .append(templater(HTMLprojectDescription, project.description));
+        project.images.forEach(function (image) {
+            projectEntry
+                .append(templater(HTMLprojectImage, image));
+        });
+    });
+};
+projects.display();
 work.display();
 bio.display();
