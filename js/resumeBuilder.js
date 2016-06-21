@@ -15,7 +15,7 @@ var bio = {
 };
 
 var education = {
-      school        : [
+      schools       : [
           {
                 name        : 'Cornell University'
               , location    : 'Ithaca, NY'
@@ -194,6 +194,23 @@ projects.display = function () {
         });
     });
 };
+education.display = function () {
+    this.schools.forEach(function (school) {
+        $('#education')
+            .append(HTMLschoolStart);
+        var educationEntry = $('.education-entry:last');
+        educationEntry
+            .append(templater(HTMLschoolName, school.name) +
+                templater(HTMLschoolDegree, school.degree))
+            .append(templater(HTMLschoolDates, school.dates))
+            .append(templater(HTMLschoolLocation, school.location));
+        school.majors.forEach(function (major) {
+            educationEntry
+                .append(templater(HTMLschoolMajor, major));
+        });
+    });
+};
+education.display();
 projects.display();
 work.display();
 bio.display();
