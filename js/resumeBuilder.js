@@ -10,7 +10,7 @@ var bio = {
         , location  : 'Jackson, NJ'
     }
     , welcomeMessage: 'I am a recent graduate looking for a developer job in NYC.  See my work:'
-    , skills        : ['HTML', 'CSS', 'Javascript']
+    , skills        : ['HTML', 'CSS', 'Javascript', 'jQuery','Responsive Web Design', 'PHP', 'MySQL', 'Java', 'Python']
     , biopic        : 'https://unsplash.it/220/220/?random'
 };
 
@@ -144,16 +144,26 @@ var templater = function (template, data) {
 };
 
 bio.display = function () {
-    $('#header')
+    var header = $('#header');
+    //BASIC HEADER INFO
+    header
         .append(templater(HTMLbioPic, this.biopic))
         .append(templater(HTMLheaderName, this.name))
         .append(templater(HTMLheaderRole, this.role))
         .append(templater(HTMLwelcomeMsg, this.welcomeMessage));
+    //CONTACTS
     $('#topContacts')
         .append(templater(HTMLmobile, this.contacts.mobile))
         .append(templater(HTMLemail, this.contacts.email))
         .append(templater(HTMLgithub, this.contacts.github))
         .append(templater(HTMLlocation, this.contacts.location));
+    //SKILLS
+    header
+        .append(templater(HTMLskillsStart));
+    this.skills.forEach(function (skill) {
+        $('#skills')
+            .append(templater(HTMLskills, skill));
+    });
 };
 
 bio.display();
