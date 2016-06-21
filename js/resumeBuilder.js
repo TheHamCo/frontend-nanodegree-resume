@@ -152,7 +152,7 @@ bio.display = function () {
         .append(templater(HTMLheaderRole, this.role))
         .append(templater(HTMLwelcomeMsg, this.welcomeMessage));
     //CONTACTS
-    $('#topContacts')
+    $('#topContacts, #footerContacts')
         .append(templater(HTMLmobile, this.contacts.mobile))
         .append(templater(HTMLemail, this.contacts.email))
         .append(templater(HTMLgithub, this.contacts.github))
