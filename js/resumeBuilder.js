@@ -84,3 +84,21 @@ var education = {
         }
     ]
 };
+
+var work = {
+      jobs          : [
+          {
+                employer    : 'NASA Goddard Space Flight Center'
+              , title       : 'Mission Design Lab (MDL) Intern'
+              , location    : 'Greenbelt, MD'
+              , dates       : '2010'
+              , description : ''
+          },{
+                employer    : 'NASA Goddard Space Flight Center'
+              , title       : 'Intern'
+              , location    : 'Greenbelt, MD'
+              , dates       : '2011'
+              , description : ''
+          }
+      ]
+};
