@@ -11,7 +11,7 @@ var bio = {
     }
     , welcomeMessage: 'I am a recent graduate looking for a developer job in NYC.  See my work:'
     , skills        : ['HTML', 'CSS', 'Javascript']
-    , biopic        : 'xxx.jpg'
+    , biopic        : 'https://unsplash.it/220/220/?random'
 };
 
 var education = {
@@ -137,4 +137,23 @@ var projects = {
               , images      : ['https://unsplash.it/200/200/?random','https://unsplash.it/200/200/?random']
           }
       ]
-}
+};
+
+var templater = function (template, data) {
+    return template.replace('%data%',data);
+};
+
+bio.display = function () {
+    $('#header')
+        .append(templater(HTMLbioPic, this.biopic))
+        .append(templater(HTMLheaderName, this.name))
+        .append(templater(HTMLheaderRole, this.role))
+        .append(templater(HTMLwelcomeMsg, this.welcomeMessage));
+    $('#topContacts')
+        .append(templater(HTMLmobile, this.contacts.mobile))
+        .append(templater(HTMLemail, this.contacts.email))
+        .append(templater(HTMLgithub, this.contacts.github))
+        .append(templater(HTMLlocation, this.contacts.location));
+};
+
+bio.display();
