@@ -92,13 +92,13 @@ var work = {
               , title       : 'Mission Design Lab (MDL) Intern'
               , location    : 'Greenbelt, MD'
               , dates       : '2010'
-              , description : ''
+              , description : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit'
           },{
                 employer    : 'NASA Goddard Space Flight Center'
               , title       : 'Intern'
               , location    : 'Greenbelt, MD'
               , dates       : '2011'
-              , description : ''
+              , description : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit'
           }
       ]
 };
@@ -166,4 +166,18 @@ bio.display = function () {
     });
 };
 
+work.display = function () {
+    this.jobs.forEach(function (job) {
+        $('#workExperience')
+            .append(HTMLworkStart);
+        $('.work-entry:last')
+            .append(templater(HTMLworkEmployer, job.employer) +
+                templater(HTMLworkTitle, job.title))
+            .append(templater(HTMLworkDates, job.dates))
+            .append(templater(HTMLworkLocation, job.location))
+            .append(templater(HTMLworkDescription, job.description));
+    });
+};
+
+work.display();
 bio.display();
