@@ -102,3 +102,39 @@ var work = {
           }
       ]
 };
+
+var projects = {
+      projects      : [
+          {
+                title       : 'Cornell CS2300: Promote Something'
+              , dates       : '2016'
+              , description : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium esse fuga mollitia'
+              , images      : ['','']
+          },{
+                title       : 'Cornell CS2300: Online Catalog'
+              , dates       : '2016'
+              , description : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium esse fuga mollitia'
+              , images      : ['https://unsplash.it/200/200/?random','https://unsplash.it/200/200/?random']
+          },{
+                title       : 'Cornell CS2300: Image Album'
+              , dates       : '2016'
+              , description : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium esse fuga mollitia'
+              , images      : ['https://unsplash.it/200/200/?random','https://unsplash.it/200/200/?random']
+          },{
+                title       : 'Cornell CS2300: Ithaca Health Alliance Website'
+              , dates       : '2016'
+              , description : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium esse fuga mollitia'
+              , images      : ['https://unsplash.it/200/200/?random','https://unsplash.it/200/200/?random']
+          },{
+                title       : 'Udacity FEND: Portfolio Site'
+              , dates       : '2016'
+              , description : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium esse fuga mollitia'
+              , images      : ['https://unsplash.it/200/200/?random','https://unsplash.it/200/200/?random']
+          },{
+                title       : 'Udacity FEND: Online Resume'
+              , dates       : '2016'
+              , description : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium esse fuga mollitia'
+              , images      : ['https://unsplash.it/200/200/?random','https://unsplash.it/200/200/?random']
+          }
+      ]
+}
