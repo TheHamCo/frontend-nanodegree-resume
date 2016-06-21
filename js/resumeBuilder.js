@@ -237,3 +237,5 @@ education.display();
 projects.display();
 work.display();
 bio.display();
+
+$('#mapDiv').append(googleMap);
